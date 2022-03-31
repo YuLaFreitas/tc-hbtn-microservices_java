@@ -6,9 +6,9 @@ O que é Spring Boot Framework?
 Quais são os benefícios e recursos que Spring Boot fornece?
 
  Spring Boot Framework:
-> favorece a convenção sobre as configurações.
+> Favilita as configurações.
 > Tem um servidor embarcado (no caso Tomcat).
-> Organiza o Pom.xml
+> Organiza o pom.xml
 > Pelo dev tour reiniciamos o que fazemos, desabilitando o cache.
 > Integra o live loaded, permitindo atualização automática.
 > Realiza métricas, pelo actualtor.
