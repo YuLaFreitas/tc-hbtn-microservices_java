@@ -1,14 +1,27 @@
 O que é Spring Boot Framework?
-É um framework que disponibiliza diversas ferramentas e facilita as configurações para desenvolvimento web, microserviços e aplicações stand alone.
+
+ E, disponibiliza diversas ferramentas e facilita as configurações para desenvolvimento web, microserviços e aplicações stand alone.
 
 Quais são os benefícios e recursos que Spring Boot fornece?
-Fácil configuração, leve, possui servidor embarcado, gerenciador de dependencias.
 
-Como é feita a adição de novas dependências (JPA, Hibernate, etc…) ?
+ Spring Boot Framework:
+ Favilita as configurações.
+ Tem um servidor embarcado (no caso Tomcat).
+ Organiza o om.xml
+ Pelo dev tour reiniciamos o que fazemos, desabilitando o cache.
+ Integra o live loaded, permitindo atualização automática.
+ Realiza métricas, pelo actualtor.
+ gerenciador de dependencias.
+
+Como é feita a adição de (JPA, Hibernate, etc…) ?
+
 Através do arquivo pom.xml
 
 Na sua opinião, qual melhor IDE para utilizar para trabalhar como Spring Boot: Spring Tools Suites, IntelliJ IDEA, Eclipse ou NetBeans ?
-O STS é simplificado e ideal para quem utiliza o eclipse, porém prefiro o intellij para desenvolver com Spring, por familiaridade com a IDE
+
+Spring Tools Suites.
 
 O que é Spring Initializer?
-É um site web para criação de projetos Spring
+
+O Spring Initializer responsável por gerar a estrutura do Spring Boot, 
+sendo ele um site web para criação de projetos Spring
