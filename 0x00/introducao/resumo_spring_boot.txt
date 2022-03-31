@@ -14,10 +14,10 @@ Quais são os benefícios e recursos que Spring Boot fornece?
 Como é feita a adição de (JPA, Hibernate, etc…) ?
 
 > Pelo Spring IoC Container, usando as notaçãos
-@Controller, @Sevice, @Repository….
+@Controller, @Sevice, @Repository, @JPA, @Hibernate, ….
 
 Na sua opinião, qual melhor IDE para utilizar para trabalhar como Spring Boot: Spring Tools Suites, IntelliJ IDEA, Eclipse ou NetBeans ?
-Spring Tools.
+Spring Tools Suites.
 
 O que é Spring Initializer?
 
