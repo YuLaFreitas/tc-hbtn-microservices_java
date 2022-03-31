@@ -1,6 +1,6 @@
 O que é Spring Boot Framework?
 
- > O Spring Boot Framework cria aplicações estalone, configura e cria a infraestrutura dos projetos.
+ > O Spring Boot Framework cria aplicações estand alone (estand-alone), configura e cria a infraestrutura dos projetos.
 
 Quais são os benefícios e recursos que Spring Boot fornece?
 
