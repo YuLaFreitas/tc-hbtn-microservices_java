@@ -1,0 +1,24 @@
+O que é Spring Boot Framework?
+
+ > Ele cria aplicações estalone, configura e cria a infraestrutura dos projetos.
+
+Quais são os benefícios e recursos que Spring Boot fornece?
+
+> Ele favorece a convenção sobre as configurações.
+>Tem um servidor embarcado (o Tomcat).
+> Organiza o Pom.xml
+> Pelo dev tour reiniciamos o que fazemos, desabilitando o cache.
+> Integra o live loaded, permitindo atualização automática.
+> Realiza métricas, pelo actualtor.
+
+Como é feita a adição de (JPA, Hibernate, etc…) ?
+
+> Pelo Spring IoC Container, usando as notaçãos
+@Controller, @Sevice, @Repository….
+
+Na sua opinião, qual melhor IDE para utilizar para trabalhar como Spring Boot: Spring Tools Suites, IntelliJ IDEA, Eclipse ou NetBeans ?
+Spring Tools.
+
+O que é Spring Initializer?
+
+É responsável por gerar a estrutura do Spring Boot.
