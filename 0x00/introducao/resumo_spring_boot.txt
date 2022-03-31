@@ -1,11 +1,12 @@
 O que é Spring Boot Framework?
 
- > Ele cria aplicações estalone, configura e cria a infraestrutura dos projetos.
+ > O Spring Boot Framework cria aplicações estalone, configura e cria a infraestrutura dos projetos.
 
 Quais são os benefícios e recursos que Spring Boot fornece?
 
-> Ele favorece a convenção sobre as configurações.
->Tem um servidor embarcado (o Tomcat).
+ Spring Boot Framework:
+> favorece a convenção sobre as configurações.
+> Tem um servidor embarcado (no caso Tomcat).
 > Organiza o Pom.xml
 > Pelo dev tour reiniciamos o que fazemos, desabilitando o cache.
 > Integra o live loaded, permitindo atualização automática.
@@ -21,4 +22,4 @@ Spring Tools Suites.
 
 O que é Spring Initializer?
 
-É responsável por gerar a estrutura do Spring Boot.
+O Spring Initializer responsável por gerar a estrutura do Spring Boot.
