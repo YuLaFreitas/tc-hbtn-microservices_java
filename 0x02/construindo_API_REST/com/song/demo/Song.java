@@ -8,6 +8,18 @@ public class Song {
     private String anoLancamento;
     
 
+    @Override
+    public String toString() {
+        return "{" +
+            " id='" + getId() + "'" +
+            ", nome='" + getNome() + "'" +
+            ", artista='" + getArtista() + "'" +
+            ", album='" + getAlbum() + "'" +
+            ", anoLancamento='" + getAnoLancamento() + "'" +
+            "}";
+    }
+
+
     public Integer getId() {
         return this.id;
     }
