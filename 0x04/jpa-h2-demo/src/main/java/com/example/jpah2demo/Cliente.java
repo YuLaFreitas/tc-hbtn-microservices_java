@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.io.FilenameFilter;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,15 +30,15 @@ public class Cliente implements Serializable {
     @Column(name = "email")
     public String email = null;
 
-//    @OneToMany(
-//            cascade = CascadeType.ALL,
-//            orphanRemoval = true
-//    )
-//    @Column(name = "telefones")
-//    private List<Telefone> telefones = new ArrayList<>();
-//
-//    @Column(name = "endereco")
-//    private List<Endereco> endereco = new ArrayList<>();
+    @OneToMany(
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    @Column(name = "telefones")
+    private List<Telefone> telefones = new ArrayList<>();
+
+    @Column(name = "endereco")
+    private List<Endereco> endereco = new ArrayList<>();
 
 }
 

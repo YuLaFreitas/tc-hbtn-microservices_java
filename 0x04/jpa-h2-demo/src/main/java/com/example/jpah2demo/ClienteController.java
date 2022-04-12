@@ -37,9 +37,10 @@ public class ClienteController{
     @PutMapping("/updateClientById/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void updateCliente(@PathVariable("id") Long id, @RequestBody Cliente cliente){
-        ResponseEntity<Cliente> responseEntity = findClientById(id);
-        Cliente cli = responseEntity.getBody();
-        assert cli != null;
-        clienteRepository.save(cli);
+
+       /* clienteRepository.findById(id).map(cliente -> {
+            return ;
+        });*/
+
     }
 }
