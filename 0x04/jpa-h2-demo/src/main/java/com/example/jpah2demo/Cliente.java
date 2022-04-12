@@ -10,36 +10,88 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
 @Entity
 public class Cliente implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
-    public Long id = null;
+    public Long id;
 
-    @Column(name = "nome")
-    public String nome = null;
+    @Column
+    public String nome;
 
-    @Column(name = "idade")
-    public Long idade = null;
+    @Column
+    public Long idade;
 
-    @Column(name = "email")
-    public String email = null;
+    @Column
+    public String email;
 
-    @OneToMany(
-            cascade = CascadeType.ALL,
-            orphanRemoval = true
-    )
-    @Column(name = "telefones")
-    private List<Telefone> telefones = new ArrayList<>();
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name ="cliente_id")
+    private List<Telefone> telefones = new ArrayList<Telefone>();
 
-    @Column(name = "endereco")
-    private List<Endereco> endereco = new ArrayList<>();
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "cliente_id")
+    private List<Endereco> enderecos = new ArrayList<Endereco>();
 
+    public Cliente() {
+    }
+
+    public Cliente(Long id, String nome, Long idade, String email, List<Telefone> telefones, List<Endereco> enderecos) {
+        this.id = id;
+        this.nome = nome;
+        this.idade = idade;
+        this.email = email;
+        this.telefones = telefones;
+        this.enderecos = enderecos;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Long getIdade() {
+        return idade;
+    }
+
+    public void setIdade(Long idade) {
+        this.idade = idade;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public List<Telefone> getTelefones() {
+        return telefones;
+    }
+
+    public void setTelefones(List<Telefone> telefones) {
+        this.telefones = telefones;
+    }
+
+    public List<Endereco> getEnderecos() {
+        return enderecos;
+    }
+
+    public void setEnderecos(List<Endereco> enderecos) {
+        this.enderecos = enderecos;
+    }
 }
 
 

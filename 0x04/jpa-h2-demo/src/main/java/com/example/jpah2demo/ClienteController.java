@@ -38,9 +38,8 @@ public class ClienteController{
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void updateCliente(@PathVariable("id") Long id, @RequestBody Cliente cliente){
 
-       /* clienteRepository.findById(id).map(cliente -> {
-            return ;
-        });*/
+        Cliente cliente1 = clienteRepository.findById(id).get();
+        clienteRepository.save(cliente1);
 
     }
 }

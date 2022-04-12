@@ -9,20 +9,47 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-@Data
 public class Telefone implements Serializable {
     @Id
-    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long id;
 
-    @Column(name = "DDD")
     public Long ddd;
 
-    @Column(name = "numero")
     public Long numero;
+
+
+    public Telefone() {
+    }
+
+    public Telefone(Long id, Long ddd, Long numero, Cliente cliente) {
+        this.id = id;
+        this.ddd = ddd;
+        this.numero = numero;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getDdd() {
+        return ddd;
+    }
+
+    public void setDdd(Long ddd) {
+        this.ddd = ddd;
+    }
+
+    public Long getNumero() {
+        return numero;
+    }
+
+    public void setNumero(Long numero) {
+        this.numero = numero;
+    }
 
 }
