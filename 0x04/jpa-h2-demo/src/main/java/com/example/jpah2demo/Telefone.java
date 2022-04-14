@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 
+@Table(name = "telefone")
 @Entity
 public class Telefone implements Serializable {
     @Id
@@ -18,6 +19,17 @@ public class Telefone implements Serializable {
 
     public Long numero;
 
+    @ManyToOne
+    @Transient
+    private Cliente cliente;
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 
     public Telefone() {
     }

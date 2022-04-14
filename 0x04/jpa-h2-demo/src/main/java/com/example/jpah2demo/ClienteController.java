@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class ClienteController{
@@ -25,7 +26,8 @@ public class ClienteController{
 
     @GetMapping("/findClientById/{id}")
     public ResponseEntity<Cliente> findClientById(@PathVariable("id") Long idClient) {
-        return new ResponseEntity<Cliente>(clienteRepository.getById(idClient), HttpStatus.OK);
+        Optional<Cliente> clienteOptional = clienteRepository.findById(idClient);
+        return new ResponseEntity<Cliente>(clienteOptional.get(), HttpStatus.OK);
     }
 
     @DeleteMapping("/removeClientById/{id}")
@@ -37,9 +39,11 @@ public class ClienteController{
     @PutMapping("/updateClientById/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void updateCliente(@PathVariable("id") Long id, @RequestBody Cliente cliente){
+        Optional<Cliente> clienteOptional = clienteRepository.findById(id);
 
-        Cliente cliente1 = clienteRepository.findById(id).get();
-        clienteRepository.save(cliente1);
-
+        if(!clienteOptional.equals(null)){
+            clienteRepository.delete(clienteOptional.get());
+            clienteRepository.save(cliente);
+        }
     }
 }

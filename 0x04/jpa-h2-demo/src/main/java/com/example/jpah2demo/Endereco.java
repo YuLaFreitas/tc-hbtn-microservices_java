@@ -1,14 +1,10 @@
 package com.example.jpah2demo;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@Table(name = "endereco")
 public class Endereco implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -38,6 +34,19 @@ public class Endereco implements Serializable{
         this.cidade = cidade;
         this.estado = estado;
     }
+
+    @ManyToOne
+    @Transient
+    private Cliente cliente;
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
 
     public Long getId() {
         return id;
